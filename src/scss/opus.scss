@@ -1,0 +1,428 @@
+// PROMO
+.promo-opus {
+    padding-bottom: 130px;
+    color: $white;
+    background: url('../img/opus-back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    &__title {
+        margin-top: 150px;
+        text-align: center;
+    }
+    &__text {
+        text-align: center;
+    }
+    &__link {
+        margin-top: 450px;
+        text-align: center;
+        a {
+            position: relative;
+            z-index: 2;
+            transition: all 0.6s ease 0s;
+            &:before {
+                position: absolute;
+                content: '';
+                transition: all 0.6s ease 0s;
+                top: 20%;
+                left: -28px;
+                width: 16px;
+                height: 16px;
+                background: $red;
+                border-radius: 50%;
+                z-index: -1;
+            }
+        }
+    }
+    &__socials {
+        margin-top: 50px;
+    }
+}
+// /PROMO
+// DESSERTS
+.desserts {
+    margin-top: 200px;
+    &__title {
+        text-align: center;
+    }
+    &__sub-title {
+        margin: 40px auto 0px auto;
+        max-width: 460px;
+        text-align: center;
+    }
+    &__carts {
+        margin-top: 60px;
+    }
+    &__slider {
+        max-width: 1280px;
+    }
+    .swiper-wrapper {
+        padding: 0px 110px;
+    }
+    .swiper-slide {
+        max-width: 265px;
+    }
+    .swiper-button-prev::after {
+        color: $black;
+    }
+    .swiper-button-next::after {
+        color: $black;
+    }
+    &__img {
+        max-width: 265px;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__name {
+        margin-top: 40px;
+    }
+    &__text {
+        margin-top: 16px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid $black;
+        color: $stroke;
+    }
+    &__price {
+        margin-top: 10px;
+    }
+    &__link {
+        margin-top: 20px;
+        padding: 0px 0px 10px 30px;
+        border-bottom: 1px solid $black;
+        a {
+            position: relative;
+            z-index: 2;
+            transition: all 0.6s ease 0s;
+            &:before {
+                position: absolute;
+                content: '';
+                transition: all 0.6s ease 0s;
+                top: 20%;
+                left: -28px;
+                width: 16px;
+                height: 16px;
+                background: $red;
+                border-radius: 50%;
+                z-index: -1;
+            }
+        }
+    }
+}
+// /DESSERTS
+// ATRIBUTE
+.atribute {
+    margin-top: 190px;
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        @media(max-width: 900px){
+            flex-direction: column;
+            gap: 30px;
+        } 
+    }
+    &__name {
+        flex: 0 1 50%;
+        padding-left: 55px;
+        @media(max-width: 900px){
+            padding: 0;
+        }
+        @media(max-width: $md4 + px){
+            max-width: 210px;
+        }
+    }
+    &__image {
+        margin-top: 255px;
+        max-width: 290px;
+        max-height: 400px;
+        @media(max-width: 900px){
+            display: none;
+        } 
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__desc {
+        flex: 0 1 50%;
+        padding-left: 20px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background: $black;
+        }
+        @media(max-width: 900px){
+            gap: 150px;
+        }
+    }
+    &__foto {
+        max-width: 650px;
+        max-height: 670px;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @media(max-width: 1200px){
+            max-width: 544px;
+        } 
+    }
+}
+// /ATRIBUTE
+// VALUES 
+.values {
+    margin-top: 160px;
+    &__title {
+        margin-left: 60px;
+    }
+    &__list {
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-between;
+        @media(max-width: $md3+px){
+            flex-direction: column;
+        }
+    }
+    &__item {
+        &:nth-child(1) {
+            flex: 0 1 25%;
+            margin-top: 220px;
+            .values__info {
+                margin-left: auto;
+            }
+            @media(max-width: $md3+px){
+                .values__info {
+                    margin-left: 0;
+                }
+                margin-top: 40px;
+            }
+        }
+        &:nth-child(2) {
+            flex: 0 0 30%;
+            @media(max-width: $md3+px){
+                .values__image {
+                    display: none;
+                }
+            }
+        }
+        &:nth-child(3) {
+            margin-top: 220px;
+            flex: 0 0 25%;
+            @media(max-width: $md3+px){
+                .values__image {
+                    display: none;
+                }
+                margin-top: 0;
+            }
+        }
+    }
+    &__info {
+        margin-top: 30px;
+        max-width: 280px;
+        @media(max-width: $md3+px){
+            max-width: 100%;
+        }
+    }
+    &__image {
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__text {
+        margin-top: 20px;
+    }
+}
+// /VALUES
+// REVIEW-OPUS
+.review-opus {
+    margin-top: 160px;
+    background: url('../img/back-review-opus.png');
+    background-size: cover;
+    background-position-y: center;
+    padding: 250px 0px;
+    .review__slide {
+        background: $brown;
+        z-index: 10;
+    }
+}
+// /REVIEW-OPUS
+// INFO-OPUS
+.info-opus {
+    margin-top: 175px;
+    &__title {
+        margin-left: 210px;
+    }
+    &__list {
+        margin-top: 90px;
+    }
+    .list-info__item {
+        &.active {
+            background-color: $brown;
+        }
+    }
+}
+// INFO-OPUS
+// INSTAGRAM
+.instagram {
+    margin-top: 190px;
+    &__info {
+        padding: 0px 135px 0px 55px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__text {
+        max-width: 435px;
+        a {
+            transition: all 0.6s ease 0s;
+        }
+    }
+    &__posts {
+        margin: 112px 0px 0px 160px;
+        position: relative;
+        &:hover {
+            .instagram__btn {
+                svg path {
+                    animation: btn-hover 1.5s linear infinite;
+                    @keyframes btn-hover {
+                        0% {
+                            transform: translate(0, 0);
+                        }
+                        10% {
+                            transform: translate(0, 0);
+                        }
+                        33% {
+                            transform: translate(120%, 0);
+                            opacity: 0;
+                        }
+                        66% {
+                            transform: translate(-120%, 0);
+                            opacity: 0;
+                        }
+                        100% {
+                            transform: translate(0, 0);
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__btn {
+        position: absolute;
+        z-index: 5;
+        top: 35%;
+        left: -65px;
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        background: $brown;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__img {
+        max-width: 435px;
+        max-height: 435px;
+        img {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__link {
+        margin-top: 30px;
+        padding-left: 15px;
+        a {
+            position: relative;
+            z-index: 2;
+            transition: all 0.6s ease 0s;
+            &:before {
+                position: absolute;
+                content: '';
+                transition: all 0.6s ease 0s;
+                top: 20%;
+                left: -15px;
+                width: 16px;
+                height: 16px;
+                background: $red;
+                border-radius: 50%;
+                z-index: -1;
+            }
+        }
+    }
+    &__slide {
+        &:not(:first-child){
+            margin-left: 20px;
+        }
+    }
+}
+// /INSTAGRAM
+// ABOUT-OPUS
+.about-opus {
+    margin-top: 190px;
+    padding-bottom: 80px;
+    &__body {
+        padding: 0px 70px 0px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+    &__maps {
+        iframe {
+            max-width: 615px;
+            max-height: 615px;
+        }
+    }
+    &__contacts {
+        padding: 116px 150px 140px 150px;
+        border-radius: 50%;
+        border: 1px solid $black;
+    }
+    &__title {
+        text-align: center;
+    }
+    &__mail {
+        text-align: center;
+        margin-top: 40px;
+        padding: 10px 0px;
+        border-bottom: 1px solid $black;
+        a {
+            font-weight: 400;
+            transition: all 0.6s ease 0s;
+            &:hover {
+                transition: all 0.6s ease 0s;
+                color: $brown;
+            }
+        }
+    }
+    &__place {
+        margin: 10px auto 0px auto;
+        padding: 10px 0px;
+        max-width: 200px;
+    }
+    &__schedule {
+        padding: 20px 0px 10px 0px;
+        border-top: 1px solid $black;
+        border-bottom: 1px solid $black;
+        text-align: center;
+    }
+}

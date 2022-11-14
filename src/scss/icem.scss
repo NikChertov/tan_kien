@@ -1,0 +1,462 @@
+// PROMO
+.promo-icem {
+    background: url("../img/back-image.png");
+    background-size: cover;
+    &__body {
+        padding: 120px 0px 150px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: $white;
+    }
+    &__socials {
+        margin-top: 60px;
+    }
+}
+.circle-promo {
+    padding: 145px 65px 110px 65px;
+    border-radius: 50%;
+    border: 1px solid $white;
+    &__sub-title {
+        text-align: center;
+    }
+    &__title {
+        font-family: "Noto Serif Display", serif;
+        margin-top: 25px;
+        text-align: center;
+    }
+    &__link {
+        margin-top: 80px;
+        text-align: center;
+        a {
+            color: inherit;
+            position: relative;
+            z-index: 2;
+            transition: all 0.6s ease 0s;
+            &:before {
+                position: absolute;
+                content: '';
+                transition: all 0.6s ease 0s;
+                top: 20%;
+                left: -28px;
+                width: 16px;
+                height: 16px;
+                background: $yellow;
+                border-radius: 50%;
+                z-index: -1;
+            }
+        }
+    }
+}
+// /PROMO
+// WELCOME
+.welcome {
+    margin-top: 80px;
+    &__body {
+        padding: 0px 60px 0px 60px;
+    }
+    &__info {
+        margin-top: 40px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    &__desc {
+        flex: 0 0 620px;
+    }
+    &__join {
+        margin-top: 30px;
+        padding-left: 30px;
+        a {
+            position: relative;
+            transition: all 0.6s ease 0s;
+            &:before {
+                position: absolute;
+                content: '';
+                transition: all 0.6s ease 0s;
+                top: 20%;
+                left: -28px;
+                width: 16px;
+                height: 16px;
+                background: $yellow;
+                border-radius: 50%;
+                z-index: -1;
+            }
+        }
+    }
+    &__circles{
+        margin-top: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+    .location-welcome {
+        flex: 0 0 512px;
+        min-height: 512px;
+        padding: 83px 140px;
+        border-radius: 50%;
+        color: $white;
+        text-align: center;
+        background: url("../img/location.png");
+        &__line {
+            margin:30px auto 0px auto;
+            height: 130px;
+            width: 2px;
+            background: $white;
+        }
+        &__place {
+            margin-top: 30px;
+        }
+        &__link {
+            margin-top: 10px;
+            a {
+                padding-left: 25px;
+                position: relative;
+                transition: all 0.6s ease 0s;
+                &:before {
+                    position: absolute;
+                    content: '';
+                    transition: all 0.6s ease 0s;
+                    top: 20%;
+                    left: -3px;
+                    width: 16px;
+                    height: 16px;
+                    background: $yellow;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    .format {
+        flex: 0 0 512px;
+        min-height: 512px;
+        padding: 83px 83px;
+        text-align: center;
+        border-radius: 50%;
+        background: $yellow;
+        &__line {
+            margin: 30px auto 0px auto;
+            height: 130px;
+            width: 2px;
+            background: $black;
+        }
+        &__text {
+            margin-top: 30px;
+        }
+    }
+}
+// /WELCOME
+// COURSES
+.courses {
+    margin-top: 160px;
+    &__title {
+        margin-left: 60px;
+    }
+    &__body {
+        margin: 0 auto;
+    }
+    .swiper {
+        margin-top: 70px;
+        max-width: 1250px;
+        position: relative;
+        .swiper-button-next::after {
+            color: $black;
+
+            position: absolute;
+        }
+        .swiper-button-prev::after {
+            color: $black;
+        }
+        .swiper-wrapper {
+            padding-left: 42px;
+            padding-right: 60px;
+        }
+        .swiper-slide {
+            max-width: 388px;
+            &:not(:first-child){
+                margin-left: 20px;
+            }
+        }
+    }
+}
+// /COURSES
+// ABOUT
+.about {
+    margin-top: 160px;
+    &__body {
+        padding-left:60px;
+        display: flex;
+        justify-content: space-between;
+        gap: 185px;
+    }
+    &__sub-title {
+        margin-top: 440px;
+    }
+    &__text {
+        margin-top: 20px;
+    }
+    &__image {
+        height: auto;
+        flex: 0 0 558px;
+        position: relative;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        &:before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: -20px;
+            width: 1px;
+            height: 100%;
+            background-color: $black;
+        }
+    }
+}
+// /ABOUT
+// LEARN
+.learn {
+    margin-top: 160px;
+    &__body {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__sliders {
+        .swiper {
+            max-width: 480px;
+            position: relative;
+            padding-bottom: 40px;
+        }
+        .swiper-pagination-fraction {
+            width: auto;
+            position: absolute;
+            bottom: 0;
+            left: 77%;
+            z-index: 10;
+        }
+        .swiper-pagination-current {
+            color: $yellow;
+        }
+        .swiper-slide {
+            max-height: 780px;
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    &__button-prev {
+        position: absolute;
+        bottom: 2px;
+        left: 62%;
+        background: transparent;
+    }
+    &__button-next {
+        position: absolute;
+        bottom: 2px;
+        right: 0;
+        background: transparent;
+    }
+    &__info {
+        margin-top: 130px;
+        flex: 0 0 315px;
+    }
+    &__text {
+        margin-top: 80px;
+    }
+    &__link {
+        margin-top: 30px;
+        padding-left: 30px;
+        a {
+            transition: all 0.6s ease 0s;
+            position: relative;
+            &:before {
+                position: absolute;
+                content: '';
+                transition: all 0.6s ease 0s;
+                top: 20%;
+                left: -28px;
+                width: 16px;
+                height: 16px;
+                background: $yellow;
+                border-radius: 50%;
+                z-index: -1;
+            }
+        }
+    }
+    &__image {
+        margin-top: 425px;
+        flex: 0 0 375px;
+        max-height: 487px;
+        position: relative;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &:before {
+            position: absolute;
+            content: '';
+            left: -20px;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background: $black;
+        }
+    }
+}
+// /LEARN
+// REVIEW
+.review {
+    margin-top: 160px;
+    background: url('../img/back-review.png');
+    background-size: cover;
+    padding: 250px 0px;
+    &__slider {
+        margin: 0 auto;
+        max-width: 890px;
+        .swiper {
+        }
+        .swiper-pagination-fraction {
+            width: auto;
+            position: absolute;
+            top: 7%;
+            left: 85.5%;
+            @media(max-width: $md3 + px){
+                top: 80%;
+                left: 50%;
+            }
+        }
+    }
+    &__button-prev {
+        position: absolute;
+        top: 8%;
+        left: 79%;
+        z-index: 10;
+        background: transparent;
+        @media(max-width: $md3 + px){
+            top: 80%;
+            left: 43%;
+        }
+    }
+    &__button-next {
+        position: absolute;
+        top: 8%;
+        left: 91.5%;
+        z-index: 10;
+        background: transparent;
+        @media(max-width: $md3 + px){
+            top: 80%;
+            left: 57%;
+        }
+    }
+    &__slide {
+        background: $yellow;
+        padding: 0px 40px 40px 40px;
+        position: relative;
+        @media(max-width: $md2 + px){
+            padding: 0px 30px 30px 30px;
+        }
+    }
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-top: 20px;
+        padding-bottom: 20px;
+        position: relative;
+        border-bottom: 1px solid $black;
+        &::before {
+            position: absolute;
+            top: 0;
+            right: 20%;
+            content: '';
+            width: 0.5px;
+            height: 80%;
+            background-color: $black;
+        }
+        @media(max-width: $md3 + px){
+            justify-content: space-between;
+            &::before {
+                width: 0;
+                height: 0;
+            } 
+        }
+    }
+    &__text {
+        margin-top: 195px;
+        max-width: 530px;
+        @media(max-width: $md3 + px){
+            justify-content: space-between;
+            margin-top: 30px;
+            padding-bottom: 150px;
+        }
+    }
+}
+// /REVIEW
+// QUESTIONS
+.questions {
+    margin-top: 160px;
+    &__title {
+        margin-left: 60px;
+    }
+    &__list {
+        margin-top: 70px;
+    }
+}
+// /QUESTIONS
+// TOUCH
+.touch {
+    margin-top: 200px;
+    padding-bottom: 80px;
+    &__title {
+        margin-left: 60px;
+    }
+    &__circles {
+        margin-top: 90px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .item-touch {
+        max-width: 220px;
+        max-height: 220px;
+        text-align: center;
+        border-radius: 50%;
+        border: 1px solid $stroke;
+        padding: 40px 5px;
+        overflow: hidden;
+        &.item-touch-img {
+            padding: 0;
+            border: 0;
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &:nth-child(1),
+        &:nth-child(5) {
+            margin-top: 220px;
+        }
+        &__text {
+            margin-top: 35px;
+        }
+        a {
+            transition: all 0.6s ease 0s;
+            &:hover {
+                transition: all 0.6s ease 0s;
+                color: $grey;
+            }
+        }
+    }
+}
