@@ -21,8 +21,21 @@ export function sliders() {
             nextEl: '.courses__button-next',
             prevEl: '.courses__button-prev'
         },
+        spaceBetween: 20,
         slidesPerView: 3,
         watchOverflow: true,
+        breakpoints: {
+            900: {
+                slidesPerView:3,
+            },
+            600: {
+                slidesPerView: 2,
+            },
+            0: {
+                slidesPerView: 1,
+            }
+        }
+
     })
     new Swiper('.other-courses__slider', {
         navigation: {
@@ -71,7 +84,7 @@ export function sliders() {
             727: {
                 slidesPerView: 2,
             },
-            320: {
+            0: {
                 slidesPerView: 1,
                 watchOverflow: true,
             }
@@ -79,18 +92,26 @@ export function sliders() {
     });
     new Swiper('.instagram__slider', {
         slidesPerView: 3.5,
-        touchRatio: 0.5,
+        spaceBetween: 30,
+        breakpoints: {
+            1366: {
+                slidesPerView: 3.5,
+            },
+            996: {
+                slidesPerView: 3,
+            },
+            727: {
+                slidesPerView: 2,
+            },
+            320: {
+                slidesPerView: 1,
+            }
+        }
     });
 }
 
 export function sub_listFAQ() {
-    // const links = document.querySelectorAll('.list-info__link');
     const items = document.querySelectorAll('.list-info__item');
-    // for (let i = 0; i < links.length; i++){
-    //     links[i].addEventListener('click', function(){
-    //         item[i].classList.toggle('active');
-    //     })
-    // }
     items.forEach(item => {
         item.addEventListener('click', function(){
             this.classList.toggle('active');

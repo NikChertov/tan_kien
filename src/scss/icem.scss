@@ -2,6 +2,7 @@
 .promo-icem {
     background: url("../img/back-image.png");
     background-size: cover;
+    background-position-x: center;
     &__body {
         padding: 120px 0px 150px 0px;
         display: flex;
@@ -18,6 +19,18 @@
     padding: 145px 65px 110px 65px;
     border-radius: 50%;
     border: 1px solid $white;
+    @media(max-width: 550px){
+        padding: 80px 65px 60px 65px;
+        .title1 {
+            font-size: 26px;
+        }
+    }
+    @media(max-width: 370px){
+        padding: 60px 40px 60px 40px;
+        .circle-promo__link {
+            margin-top: 40px;
+        }
+    }
     &__sub-title {
         text-align: center;
     }
@@ -55,15 +68,33 @@
     margin-top: 80px;
     &__body {
         padding: 0px 60px 0px 60px;
+        @media(max-width: 995px){
+            padding: 0;
+        }
+        @media(max-width: 520px){
+            .title2-italic {
+                font-size: 24px;
+            }
+        }
     }
     &__info {
         margin-top: 40px;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        gap: 20px;
+        @media(max-width: $md3+px){
+            flex-direction: column;
+            .welcome__desc{
+                flex: 0 1 auto;
+            }
+        }
+    }
+    &__start {
+        flex-shrink: 0;
     }
     &__desc {
-        flex: 0 0 620px;
+        flex: 0 1 620px;
     }
     &__join {
         margin-top: 30px;
@@ -92,15 +123,20 @@
         justify-content: end;
         gap: 24px;
         flex-wrap: wrap;
+        @media(max-width: $md3+px){
+            justify-content: center;
+            margin-top: 40px;
+        }
     }
     .location-welcome {
         flex: 0 0 512px;
-        min-height: 512px;
+        min-height: 335px;
         padding: 83px 140px;
         border-radius: 50%;
         color: $white;
         text-align: center;
         background: url("../img/location.png");
+        background-position: center;
         &__line {
             margin:30px auto 0px auto;
             height: 130px;
@@ -129,10 +165,37 @@
                 }
             }
         }
+        @media(max-width: 1200px){
+            flex: 0 0 460px;
+            height: 460px;
+            padding: 60px 110px;
+            .location-welcome__line {
+                height: 100px;
+            }
+        }
+        @media(max-width: 1100px){
+            flex: 0 0 410px;
+            height: 410px;
+            padding: 60px 100px;
+            .location-welcome__line {
+                height: 80px;
+            }
+        }
+        @media(max-width: 905px){
+            flex: 0 0 350px;
+            height: 350px;
+            .location-welcome__line {
+                height: 70px;
+            }
+        }
+        @media(max-width: 375px){
+            flex: 0 0 335px;
+            height: 335px;
+        }
     }
     .format {
         flex: 0 0 512px;
-        min-height: 512px;
+        min-height: 335px;
         padding: 83px 83px;
         text-align: center;
         border-radius: 50%;
@@ -146,14 +209,52 @@
         &__text {
             margin-top: 30px;
         }
+        @media(max-width: 1200px){
+            flex: 0 0 460px;
+            height: 460px;
+            .format__line {
+                height: 100px;
+            }
+            padding: 60px 30px;
+        }
+        @media(max-width: 1100px){
+            flex: 0 0 410px;
+            height: 410px;
+            .format__line {
+                height: 80px;
+            }
+        }
+        @media(max-width: $md2+px){
+            font-size: 14px;
+            .format__text {
+                margin-top: 20px;
+            }
+        }
+        @media(max-width: 905px){
+            flex: 0 0 350px;
+            height: 350px;
+            .format__line {
+                height: 70px;
+            }
+        }
+        @media(max-width: 375px){
+            flex: 0 0 335px;
+            height: 335px;
+        }
     }
 }
 // /WELCOME
 // COURSES
 .courses {
     margin-top: 160px;
+    @media(max-width: $md2+px){
+        margin-top: 80px;
+    }
     &__title {
         margin-left: 60px;
+        @media(max-width: $md2+px){
+            margin-left: 0;
+        }
     }
     &__body {
         margin: 0 auto;
@@ -164,20 +265,32 @@
         position: relative;
         .swiper-button-next::after {
             color: $black;
-
             position: absolute;
         }
         .swiper-button-prev::after {
             color: $black;
         }
-        .swiper-wrapper {
-            padding-left: 42px;
-            padding-right: 60px;
-        }
         .swiper-slide {
-            max-width: 388px;
-            &:not(:first-child){
-                margin-left: 20px;
+            width: 380px;
+        }
+        @media(max-width: 900px){
+            .swiper-button-next::after {
+                font-size: 30px;
+                margin-top: 50px;
+            }
+            .swiper-button-prev::after {
+                font-size: 30px;
+                margin-top: 50px;
+                margin-left: -30px;
+            }
+        }
+        @media(max-width: 1400px){
+            .swiper-button-next::after {
+                margin-top: 50px;
+            }
+            .swiper-button-prev::after {
+                margin-top: 50px;
+                margin-left: -20px;
             }
         }
     }
@@ -186,14 +299,59 @@
 // ABOUT
 .about {
     margin-top: 160px;
+    @media(max-width: 1080px){
+        .about__body {
+            padding-left: 0;
+        }
+        .title2 {
+            font-size: 48px;
+        }
+        .title3 {
+            font-size: 32px;
+        }
+        .about__text {
+            font-size: 16px;
+        }
+    }
+    @media(max-width: 880px){
+        margin-top: 75px;
+    }
+    &__title {
+        margin-bottom: -80px;
+        @media(max-width: 880px){
+            margin: 0;
+        }
+        @media(max-width: $md4+px){
+            .title2 {
+                font-size: 24px;
+            }
+        }
+    }
     &__body {
         padding-left:60px;
         display: flex;
         justify-content: space-between;
-        gap: 185px;
+        gap: 32px;
+        @media(max-width: 880px){
+            flex-direction: column-reverse;
+        }
+    }
+    &__info {
+        flex: 0 1 542px;
+        @media(max-width: 880px){
+            flex-basis: 0;
+        }
     }
     &__sub-title {
         margin-top: 440px;
+        @media(max-width: 880px){
+            margin-top: 0px;
+        }
+        @media(max-width: $md4+px){
+            .title3 {
+                font-size: 20px;
+            }
+        }
     }
     &__text {
         margin-top: 20px;
@@ -201,6 +359,8 @@
     &__image {
         height: auto;
         flex: 0 0 558px;
+        padding-left: 20px;
+        border-left: 1px solid $black;
         position: relative;
         img {
             display: block;
@@ -208,14 +368,13 @@
             height: 100%;
             object-fit: contain;
         }
-        &:before {
-            position: absolute;
-            content: '';
-            top: 0;
-            left: -20px;
-            width: 1px;
-            height: 100%;
-            background-color: $black;
+        @media(max-width: 1024px){
+            flex-shrink: 1;
+            border-left: 0;
+            padding-left: 0;
+        }
+        @media(max-width: 880px){
+            margin-top: 40px;
         }
     }
 }
@@ -223,9 +382,17 @@
 // LEARN
 .learn {
     margin-top: 160px;
+    position: relative;
+    @media(max-width: 880px){
+        margin-top: 180px;
+    }
     &__body {
         display: flex;
         justify-content: space-between;
+        gap: 20px;
+        @media(max-width: 880px){
+            flex-direction: column;
+        }
     }
     &__sliders {
         .swiper {
@@ -239,17 +406,32 @@
             bottom: 0;
             left: 77%;
             z-index: 10;
+            @media(max-width: $md4+px){
+                left: 75%;
+            }
+            @media(max-width: 420px){
+                left: 72%;
+            }
+            @media(max-width: 380px){
+                left: 69%;
+            }
+            @media(max-width: 350px){
+                left: 66%;
+            }
         }
         .swiper-pagination-current {
             color: $yellow;
         }
         .swiper-slide {
-            max-height: 780px;
+            height: 700px;
             img {
                 display: block;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+            }
+            @media(max-width: $md4+px){
+                height: 500px;
             }
         }
     }
@@ -258,6 +440,18 @@
         bottom: 2px;
         left: 62%;
         background: transparent;
+        @media(max-width: $md4+px){
+            left: 58%;
+        }
+        @media(max-width: 420px){
+            left: 53%;
+        }
+        @media(max-width: 380px){
+            left: 48%;
+        }
+        @media(max-width: 350px){
+            left: 43%;
+        }
     }
     &__button-next {
         position: absolute;
@@ -267,10 +461,36 @@
     }
     &__info {
         margin-top: 130px;
-        flex: 0 0 315px;
+        flex: 0 1 315px;
+        @media(max-width: 1160px){
+            padding-right: 40px;
+        }
+        @media(max-width: 880px){
+            margin-top: 10px;
+        }
+    }
+    &__title {
+        @media(max-width: 880px){
+            position: absolute;
+            top: -140px;
+            left: 20px;
+        }
+        @media(max-width: $md4+px){
+            top: -80px;
+        }
     }
     &__text {
         margin-top: 80px;
+        @media(max-width: 880px){
+            margin: 0 auto;
+            text-align: center;
+            max-width: 50%;
+        }
+        @media(max-width: $md4+px){
+            text-align: start;
+            margin: 0;
+            max-width: 275px;
+        }
     }
     &__link {
         margin-top: 30px;
@@ -291,10 +511,18 @@
                 z-index: -1;
             }
         }
+        @media(max-width: 880px){
+            text-align: center;
+            margin: 30px auto 0px auto;
+        }
+        @media(max-width: $md4+px){
+            text-align: start;
+            margin: 30px 0px 0px 0px;
+        }
     }
     &__image {
         margin-top: 425px;
-        flex: 0 0 375px;
+        flex: 0 1 375px;
         max-height: 487px;
         position: relative;
         img {
@@ -312,6 +540,9 @@
             height: 100%;
             background: $black;
         }
+        @media(max-width: 1160px){
+            display: none;
+        }
     }
 }
 // /LEARN
@@ -321,6 +552,9 @@
     background: url('../img/back-review.png');
     background-size: cover;
     padding: 250px 0px;
+    @media(max-width: 880px){
+        margin-top: -40px;
+    }
     &__slider {
         margin: 0 auto;
         max-width: 890px;
@@ -335,6 +569,9 @@
                 top: 80%;
                 left: 50%;
             }
+            @media(max-width: 600px){
+                left: 45%;
+            }
         }
     }
     &__button-prev {
@@ -347,6 +584,12 @@
             top: 80%;
             left: 43%;
         }
+        @media(max-width: 600px){
+            left: 35%;
+        }
+        @media(max-width: 420px){
+            left: 28%;
+        }
     }
     &__button-next {
         position: absolute;
@@ -357,6 +600,12 @@
         @media(max-width: $md3 + px){
             top: 80%;
             left: 57%;
+        }
+        @media(max-width: 600px){
+            left: 55%;
+        }
+        @media(max-width: 420px){
+            left: 60%;
         }
     }
     &__slide {
@@ -408,6 +657,9 @@
     margin-top: 160px;
     &__title {
         margin-left: 60px;
+        @media(max-width: $md2+px){
+            margin-left: 0px;
+        }
     }
     &__list {
         margin-top: 70px;
@@ -418,13 +670,27 @@
 .touch {
     margin-top: 200px;
     padding-bottom: 80px;
+    @media(max-width: $md2+px){
+        margin-top: 80px;
+    }
     &__title {
         margin-left: 60px;
+        @media(max-width: $md3+px){
+            margin-left: 0px;
+        }
     }
     &__circles {
         margin-top: 90px;
         display: flex;
         justify-content: space-between;
+        gap: 10px;
+        flex-wrap: wrap;
+        @media(max-width: 709.8px){
+            margin-top: 40px;
+        }
+        @media(max-width: 379.8px){
+            justify-content: center;
+        }
     }
     .item-touch {
         max-width: 220px;
@@ -455,7 +721,66 @@
             transition: all 0.6s ease 0s;
             &:hover {
                 transition: all 0.6s ease 0s;
-                color: $grey;
+                color: $brown;
+            }
+        }
+        @media(max-width: 1399.8px){
+            &:nth-child(4),
+            &:nth-child(6) {
+                display: none;
+            }
+            &:nth-child(3) {
+                margin-top: 220px;
+            }
+            &:nth-child(5) {
+                margin-top: 0px;
+            }
+        }
+        @media(max-width: 935.8px){
+            &:nth-child(1) {
+                margin-top: 0px;
+            }
+            &:nth-child(2) {
+                margin-top: 220px;
+            }
+            &:nth-child(3) {
+                margin-top: 220px;
+            }
+            &:nth-child(5) {
+                margin-top: 0px;
+            }
+        }
+        @media(max-width: 709.8px){
+            &:nth-child(2) {
+                margin-top: 0px;
+            }
+            &:nth-child(3) {
+                margin-top: 0px;
+            }
+            &:nth-child(5) {
+                margin-top: 0px;
+            }
+        }
+        @media(max-width: 480px){
+            width: 170px;
+            height: 170px;
+            padding: 20px 0px;
+            &__text {
+                margin-top: 10px;
+            }
+            &:nth-child(5) {
+                margin-top: 170px;
+            }
+        }
+        @media(max-width: 379.8px){
+            width: 170px;
+            height: 170px;
+            padding: 20px 0px;
+            &__text {
+                margin-top: 10px;
+            }
+            &:nth-child(5) {
+                margin-top: 0px;
             }
         }
     }

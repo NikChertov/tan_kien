@@ -277,6 +277,11 @@
             background-color: $brown;
         }
     }
+    @media(max-width: $md2+px){
+        &__title {
+            margin-left: 15px;
+        }
+    }
 }
 // INFO-OPUS
 // INSTAGRAM
@@ -286,7 +291,11 @@
         padding: 0px 135px 0px 55px;
         display: flex;
         align-items: center;
+        gap: 30px;
         justify-content: space-between;
+        @media(max-width: $md3+px){
+            padding: 0;
+        }
     }
     &__text {
         max-width: 435px;
@@ -324,6 +333,9 @@
                 }
             }
         }
+        @media(max-width: $md3+px){
+            margin: 40px 0px 0px 50px;
+        }
     }
     &__btn {
         position: absolute;
@@ -337,10 +349,20 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @media(max-width: $md3+px){
+            width: 75px;
+            height: 75px;
+            left: -40px;
+            svg {
+                width: 42px;
+            }
+        }
     }
     &__img {
         max-width: 435px;
         max-height: 435px;
+        min-width: 250px;
+        min-height: 250px;
         img {
             display: block;
             width: 100%;
@@ -368,11 +390,6 @@
             }
         }
     }
-    &__slide {
-        &:not(:first-child){
-            margin-left: 20px;
-        }
-    }
 }
 // /INSTAGRAM
 // ABOUT-OPUS
@@ -385,17 +402,37 @@
         align-items: center;
         justify-content: space-between;
         gap: 30px;
+        @media(max-width: 1300px){
+            flex-direction: column-reverse;
+            align-items: center;
+        }
     }
     &__maps {
         iframe {
             max-width: 615px;
             max-height: 615px;
         }
+        @media(max-width: $md4+px){
+            max-height: 375px;
+        }
     }
     &__contacts {
         padding: 116px 150px 140px 150px;
         border-radius: 50%;
         border: 1px solid $black;
+        @media(max-width: 1300px){
+            padding-bottom: 116px;
+        }
+        @media(max-width: $md3+px){
+            padding: 90px 130px;
+        }
+        @media(max-width: 530px){
+            padding: 40px 80px;
+            font-size: 14px;
+        }
+        @media(max-width: 375px){
+            padding: 20px 40px;
+        }
     }
     &__title {
         text-align: center;
@@ -413,16 +450,33 @@
                 color: $brown;
             }
         }
+        @media(max-width: 1300px){
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        @media(max-width: 530px){
+            margin-top: 30px;
+        }
+        @media(max-width: 375px){
+            margin-top: 0px;
+        }
     }
     &__place {
         margin: 10px auto 0px auto;
         padding: 10px 0px;
         max-width: 200px;
+        @media(max-width: 530px){
+            max-width: 210px;
+        }
     }
     &__schedule {
         padding: 20px 0px 10px 0px;
         border-top: 1px solid $black;
         border-bottom: 1px solid $black;
         text-align: center;
+        @media(max-width: 530px){
+            border-bottom: 0;
+        }
     }
 }
