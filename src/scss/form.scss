@@ -38,6 +38,9 @@
             &#comments {
                 height: 140px;
             }
+            &:focus {
+                border: 1px solid $black;
+            }
         }
     }
     &__name {
@@ -61,6 +64,9 @@
                     transform: rotate(180deg);
                 }
             }
+            .select__header {
+                border: 1px solid $black;
+            }
         }
         &__header {
             height: 60px;
@@ -81,7 +87,7 @@
         }
         &__body {
             padding: 16px 0px 16px 50px;
-            border: 1px solid $stroke;
+            border: 1px solid $black;
             border-top: 0;
             position: absolute;
             top: 100%;

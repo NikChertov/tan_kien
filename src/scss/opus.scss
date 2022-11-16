@@ -250,6 +250,112 @@
     }
 }
 // /VALUES
+// BRANDS
+.brands {
+    margin-top: 160px;
+    @media(max-width: 860px){
+        margin-top: 80px;
+    }
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        @media(max-width: 1300px){
+            flex-direction: row-reverse;
+        }
+        @media(max-width: 860px){
+            flex-direction: column-reverse;
+        }
+    }
+    &__icons {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 30px;
+        @media(max-width: 1300px){
+            max-width: 540px;
+            .brands__item {
+                &:nth-child(4),
+                &:nth-child(6){
+                    display: none;
+                }
+            }
+        }
+        @media(max-width: 1050px){
+            max-width: 350px;
+        }
+        @media(max-width: 860px){
+            gap: 15px;
+        }
+        @media(max-width: 364.8px){
+            max-width: 160px;
+        }
+    }
+    &__item {
+        flex: 0 0 160px;
+        height: 160px;
+        border-radius: 50%;
+        border: 1px solid $black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__circle {
+        flex: 0 0 512px;
+        height: 512px;
+        background: $brown;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @media(max-width: 1300px){
+            flex: 0 0 460px;
+            height: 460px;
+            .brands__title {
+                max-width: 310px;
+            }
+            .brands__text {
+                max-width: 310px;
+            }
+        }
+        @media(max-width: 860px){
+            padding: 0px 75px;
+        }
+        @media(max-width: $md4+px){
+            padding: 0px 35px;
+            max-height: 335px;
+            .brands__line {
+                margin-top: 20px;
+                height: 70px;
+            }
+            .brands__text {
+                margin-top: 20px;
+                max-width: 265px;
+            }
+        }
+        @media(max-width: 364.8px){
+            max-height: 290px;
+        }
+    }
+    &__title {
+        max-width: 350px;
+        text-align: center;
+    }
+    &__line {
+        margin-top: 32px;
+        width: 1px;
+        height: 120px;
+        background: $black;
+    }
+    &__text {
+        margin-top: 32px;
+        text-align: center;
+        max-width: 350px;
+    }
+}
+// /BRANDS
 // REVIEW-OPUS
 .review-opus {
     margin-top: 160px;
@@ -260,6 +366,9 @@
     .review__slide {
         background: $brown;
         z-index: 10;
+    }
+    @media(max-width: $md3+px){
+        margin-top: 80px;
     }
 }
 // /REVIEW-OPUS

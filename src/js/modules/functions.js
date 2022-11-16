@@ -147,3 +147,16 @@ export function form() {
         })
     })
 }
+export function burger(){
+    let burger = document.querySelector('.header__burger');
+    let burgerMenu = document.querySelector('.burger__menu');
+    let burgerClose = document.querySelector('.burger__close');
+    burger.addEventListener('click', function(){
+        burgerMenu.classList.add('active');
+        document.body.classList.add('opened');
+    })
+    burgerClose.addEventListener('click', function(){
+        burgerMenu.classList.remove('active');
+        document.body.classList.remove('opened');
+    })
+}

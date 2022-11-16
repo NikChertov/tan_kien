@@ -183,18 +183,24 @@ h6 {
 }
 .header__change button {
   background: transparent;
-}
-.header__change button a {
   color: inherit;
+  font-size: 18px;
+  line-height: 133.3333333333%;
+  font-weight: 700;
 }
-.header__change button.active a {
+@media (max-width: 767.98px) {
+  .header__change button {
+    font-size: 16px;
+  }
+}
+.header__change button.active {
   color: #FFCC48;
 }
 .header__change button.active-opus a {
   color: #CE0000;
 }
-.header__change .icem-change {
-  color: #FEFEFE;
+.header__change button + .black-change {
+  color: #1B1B1B;
 }
 .header__burger {
   display: none;
@@ -233,6 +239,7 @@ h6 {
   width: 100%;
   height: 2px;
   background: #FEFEFE;
+  transition: all 1s ease 0s;
 }
 .header__join::after {
   position: absolute;
@@ -242,6 +249,7 @@ h6 {
   width: 100%;
   height: 1.5px;
   background: #FEFEFE;
+  transition: all 1s ease 0s;
 }
 .header__join:hover::before {
   transition: all 1.6s ease 0s;
@@ -270,6 +278,46 @@ h6 {
 }
 #black-burger::after, #black-burger::before {
   background: #1B1B1B;
+}
+
+.burger__menu {
+  background: #FFFDF6;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: all 0.6s ease 0s;
+  transform: translate(0px, 20px);
+}
+.burger__menu.active {
+  opacity: 1;
+  pointer-events: all;
+  visibility: visible;
+  transition: all 0.6s ease 0s;
+  transform: translate(0px, 0px);
+}
+.burger__list {
+  margin-top: 50px;
+}
+.burger__item {
+  padding: 20px 0px;
+  border-bottom: 1px solid #EBEBEB;
+}
+.burger__link {
+  padding-left: 20px;
+  font-weight: 400;
+  color: #000000;
+}
+.burger__close {
+  position: absolute;
+  top: 26px;
+  right: 26px;
 }
 
 .footer {
@@ -534,7 +582,7 @@ a {
 }
 .btn-hover:hover:before {
   transition: all 0.6s ease 0s;
-  width: 180%;
+  width: 190%;
   height: 100%;
   top: 0;
 }
@@ -703,6 +751,10 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.opened {
+  overflow: hidden;
 }
 
 body {
@@ -1145,7 +1197,52 @@ body {
 @media (max-width: 880px) {
   .about__image {
     margin-top: 40px;
+    max-height: 750px;
   }
+}
+@media (max-width: 410px) {
+  .about__image {
+    margin: 0;
+  }
+}
+@media (max-width: 360px) {
+  .about__image {
+    margin: -20px;
+  }
+}
+
+.chef {
+  margin-top: 160px;
+  text-align: center;
+}
+@media (max-width: 767.98px) {
+  .chef {
+    margin-top: 80px;
+  }
+  .chef .chef__group {
+    margin-top: 40px;
+  }
+}
+.chef__group {
+  margin-top: 80px;
+  display: inline-flex;
+  flex-direction: column;
+}
+.chef__image {
+  max-width: 760px;
+  max-height: 760px;
+}
+.chef__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.chef__text {
+  margin-top: 40px;
+  max-width: 445px;
+  margin-left: auto;
+  text-align: start;
 }
 
 .learn {
@@ -1386,7 +1483,7 @@ body {
   position: absolute;
   top: 8%;
   left: 79%;
-  z-index: 10;
+  z-index: 1;
   background: transparent;
 }
 @media (max-width: 767.98px) {
@@ -1446,6 +1543,7 @@ body {
   padding-bottom: 20px;
   position: relative;
   border-bottom: 1px solid #1B1B1B;
+  background: #FFCC48;
 }
 .review__info::before {
   position: absolute;
@@ -1464,6 +1562,12 @@ body {
     width: 0;
     height: 0;
   }
+}
+.review__sub-title {
+  background: #FFCC48;
+}
+.review__title {
+  background: #FFCC48;
 }
 .review__text {
   margin-top: 195px;
@@ -1885,6 +1989,130 @@ body {
   margin-top: 20px;
 }
 
+.brands {
+  margin-top: 160px;
+}
+@media (max-width: 860px) {
+  .brands {
+    margin-top: 80px;
+  }
+}
+.brands__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 1300px) {
+  .brands__body {
+    flex-direction: row-reverse;
+  }
+}
+@media (max-width: 860px) {
+  .brands__body {
+    flex-direction: column-reverse;
+  }
+}
+.brands__icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+@media (max-width: 1300px) {
+  .brands__icons {
+    max-width: 540px;
+  }
+  .brands__icons .brands__item:nth-child(4), .brands__icons .brands__item:nth-child(6) {
+    display: none;
+  }
+}
+@media (max-width: 1050px) {
+  .brands__icons {
+    max-width: 350px;
+  }
+}
+@media (max-width: 860px) {
+  .brands__icons {
+    gap: 15px;
+  }
+}
+@media (max-width: 364.8px) {
+  .brands__icons {
+    max-width: 160px;
+  }
+}
+.brands__item {
+  flex: 0 0 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 1px solid #1B1B1B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brands__circle {
+  flex: 0 0 512px;
+  height: 512px;
+  background: #D8B78C;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1300px) {
+  .brands__circle {
+    flex: 0 0 460px;
+    height: 460px;
+  }
+  .brands__circle .brands__title {
+    max-width: 310px;
+  }
+  .brands__circle .brands__text {
+    max-width: 310px;
+  }
+}
+@media (max-width: 860px) {
+  .brands__circle {
+    padding: 0px 75px;
+  }
+}
+@media (max-width: 479.98px) {
+  .brands__circle {
+    padding: 0px 35px;
+    max-height: 335px;
+  }
+  .brands__circle .brands__line {
+    margin-top: 20px;
+    height: 70px;
+  }
+  .brands__circle .brands__text {
+    margin-top: 20px;
+    max-width: 265px;
+  }
+}
+@media (max-width: 364.8px) {
+  .brands__circle {
+    max-height: 290px;
+  }
+}
+.brands__title {
+  max-width: 350px;
+  text-align: center;
+}
+.brands__line {
+  margin-top: 32px;
+  width: 1px;
+  height: 120px;
+  background: #1B1B1B;
+}
+.brands__text {
+  margin-top: 32px;
+  text-align: center;
+  max-width: 350px;
+}
+
 .review-opus {
   margin-top: 160px;
   background: url("../img/back-review-opus.png");
@@ -1895,6 +2123,11 @@ body {
 .review-opus .review__slide {
   background: #D8B78C;
   z-index: 10;
+}
+@media (max-width: 767.98px) {
+  .review-opus {
+    margin-top: 80px;
+  }
 }
 
 .info-opus {
@@ -2175,6 +2408,9 @@ body {
 .form__item input#comments {
   height: 140px;
 }
+.form__item input:focus {
+  border: 1px solid #1B1B1B;
+}
 .form__name {
   font-size: 16px;
   font-weight: 600;
@@ -2193,6 +2429,9 @@ body {
 .form .select.active .select__icon img {
   transition: all 0.6s ease 0s;
   transform: rotate(180deg);
+}
+.form .select.active .select__header {
+  border: 1px solid #1B1B1B;
 }
 .form .select__header {
   height: 60px;
@@ -2213,7 +2452,7 @@ body {
 }
 .form .select__body {
   padding: 16px 0px 16px 50px;
-  border: 1px solid #68665D;
+  border: 1px solid #1B1B1B;
   border-top: 0;
   position: absolute;
   top: 100%;

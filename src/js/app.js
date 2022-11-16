@@ -4,3 +4,4 @@ flsFunctions.isWebp();
 flsFunctions.sub_listFAQ();
 flsFunctions.sliders();
 flsFunctions.form();
+flsFunctions.burger();
